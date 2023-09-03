@@ -1,0 +1,15 @@
+.btn {
+ @apply px-[5.8em] 
+ py-[1em]
+ text-white
+ border
+ border-white
+ border-solid
+ transition-colors
+ duration-300
+ hover:bg-white
+ focus:bg-white
+ focus:text-black
+ hover:text-black
+ cursor-pointer;
+}

@@ -1,0 +1,11 @@
+.banner {
+    .swiper-pagination-bullet {
+      width: 8px;  
+      height: 8px;
+      background-color: #bebebe;
+
+      &-active {
+        background-color: #fff;
+      }
+    }
+}
