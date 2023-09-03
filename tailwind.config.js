@@ -22,6 +22,9 @@ module.exports = {
                     "100%": { opacity: 1 },
                 },
             },
+            fontSize: {
+                '5xl': ['3.25rem', '2.75rem']
+            }
         },
         screens: {
             xs: "576px",
