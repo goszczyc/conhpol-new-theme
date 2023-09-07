@@ -1,4 +1,4 @@
-<div class="container grid grid-cols-12 px-5 mx-auto gap-10 mb-32">
+<div class="container grid grid-cols-12 px-5 mx-auto gap-10 mb-28">
     <?php if ($img = get_field('about_image')) : ?>
 
         <div class="parallax-container col-start-1 col-span-full xs:col-start-2 xs:col-span-10 sm:col-start-3 sm:col-span-8 md:col-start-1 md:col-span-6 lg:col-start-2 lg:col-span-4">

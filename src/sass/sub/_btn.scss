@@ -1,5 +1,5 @@
 .btn {
- @apply px-[5.8em] 
+    @apply px-[5.8em] 
  py-[1em]
  text-white
  border
@@ -12,4 +12,8 @@
  focus:text-black
  hover:text-black
  cursor-pointer;
+
+    &--adaptive {
+        @apply px-[3em] xs:px-[5.8em];
+    }
 }
