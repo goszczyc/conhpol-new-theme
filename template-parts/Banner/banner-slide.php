@@ -22,7 +22,11 @@
                         <?php endif; ?>
                     </h2>
                 <?php endif; ?>
-                <a href="" class="btn btn--adaptive">Shop all</a>
+                <?php if ($button = get_sub_field('button')) : ?>
+
+                    <a href="<?php echo $button['url']; ?>" class="btn btn--adaptive"><?php echo $button['title']; ?></a>
+
+                <?php endif; ?>
             </div>
         </div>
     </div>
