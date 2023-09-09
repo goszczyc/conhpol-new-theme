@@ -14,7 +14,8 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                "fadeIn": "fadeIn 1200ms 2000ms ease-in forwards",
+                "fadeIn": "fadeIn 1200ms 800ms ease-in forwards",
+                "fadeIn-fast": "fadeIn 600ms 800ms ease-in forwards",
             },
             keyframes: {
                 fadeIn: {
@@ -22,6 +23,10 @@ module.exports = {
                     "100%": { opacity: 1 },
                 },
             },
+            fontSize: {
+                'xl': ['1.375rem', '2.75rem'],
+                '5xl': ['3.25rem', '1']
+            }
         },
         screens: {
             xs: "576px",
