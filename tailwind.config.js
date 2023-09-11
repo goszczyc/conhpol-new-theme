@@ -14,19 +14,25 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                "fadeIn": "fadeIn 1200ms 800ms ease-in forwards",
+                fadeIn: "fadeIn 1200ms 800ms ease-in forwards",
                 "fadeIn-fast": "fadeIn 600ms 800ms ease-in forwards",
+                tap: "tap 3000ms infinite",
             },
             keyframes: {
                 fadeIn: {
                     "0%": { opacity: 0 },
                     "100%": { opacity: 1 },
                 },
+                tap: {
+                    "8%": { transform: "scale(1.05)" },
+                    "16%": { transform: "scale(0.95)" },
+                    "24%": { transform: "scale(1)" },
+                },
             },
             fontSize: {
-                'xl': ['1.375rem', '2.75rem'],
-                '5xl': ['3.25rem', '1']
-            }
+                xl: ["1.375rem", "2.75rem"],
+                "5xl": ["3.25rem", "1"],
+            },
         },
         screens: {
             xs: "576px",
