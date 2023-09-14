@@ -1,5 +1,6 @@
 <?php
 define('TMP_PART', '/template-parts/');
+define('CMP', '/components/');
 
 // General
 require_once __DIR__ . '/src/php/general/general.php';

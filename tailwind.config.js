@@ -32,6 +32,8 @@ module.exports = {
             fontSize: {
                 xl: ["1.375rem", "2.75rem"],
                 "5xl": ["3.25rem", "1"],
+                'ilink': ["2.625rem", "3.875rem"],
+                'ilink-l': ["4.5rem", "3.875rem"],
             },
         },
         screens: {
