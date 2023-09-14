@@ -1,12 +1,16 @@
 <?php
+define('TMP_PART', '/template-parts/');
+define('CMP', '/components/');
+
 // General
 require_once __DIR__ . '/src/php/general/general.php';
 // ACF options page
 require_once __DIR__ . '/src/php/acf/options.php';
 // Menu array
 require_once __DIR__ . '/src/php/menu/wp-menu-array.php';
+// Custom posts
+require_once __DIR__ . '/src/php/custom-posts/collections.php';
 
-define('TMP_PART', '/template-parts/');
 
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
