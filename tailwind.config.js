@@ -32,8 +32,9 @@ module.exports = {
             fontSize: {
                 xl: ["1.375rem", "2.75rem"],
                 "5xl": ["3.25rem", "1"],
-                'ilink': ["2.625rem", "3.875rem"],
-                'ilink-l': ["4.5rem", "3.875rem"],
+                ilink: ["2.625rem", "3.875rem"],
+                "ilink-l": ["4.5rem", "3.875rem"],
+                year: ["6.375rem", "2.75rem"],
             },
         },
         screens: {
@@ -52,7 +53,7 @@ module.exports = {
         colors: {
             primary: "#e30613",
             white: "#fefefe",
-            "l-gray": "#f5f5f5",
+            "l-gray": "#f9f9f6",
             gray: "#9b9b9b",
             "d-gray": "#515151",
             dark: "#1f1f1f",

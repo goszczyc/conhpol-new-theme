@@ -1,0 +1,85 @@
+<?php if (have_rows('history')) : ?>
+
+
+    <section class="bg-l-gray pt-20 pb-20 mb-16">
+        <div class="container grid grid-cols-1 lg:grid-cols-12 px-5 mx-auto">
+            <div class="lg:col-span-10 lg:col-start-2">
+
+                <div class="history-slider swiper">
+                    <div class="swiper-wrapper">
+                        <?php while (have_rows('history')) : the_row(); ?>
+
+                            <div data-year="<?php echo get_sub_field('year'); ?>" class="swiper-slide bg-l-gray flex gap-10">
+
+                                <div class="flex max-sm:flex-wrap-reverse gap-10">
+                                    <div class="w-full sm:w-1/2 md:w-2/5 md:pt-8 lg:pt-16 xl:pt-20">
+                                        <h2 class="text-5xl sm:text-6xl md:text-8xl lg:text-year font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16"><?php echo get_sub_field('year'); ?></h2>
+                                        <?php if ($text = get_sub_field('text')) : ?>
+
+                                            <p class="sm:text-lg lg:text-xl "><?php echo $text; ?></p>
+
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-3/5">
+                                        <?php echo wp_get_attachment_image(get_sub_field('zdjecie'), 'standard', '', ['class' => 'w-full']); ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+
+                    </div>
+                    <div class="swiper-pagination history-pagination flex justify-between"></div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+<?php endif; ?>
+
+<?php if (have_rows('history')) : ?>
+
+
+<section class="bg-l-gray pt-20 pb-20 w">
+    <div class="container grid grid-cols-1 lg:grid-cols-12 px-5 mx-auto">
+        <div class="lg:col-span-10 lg:col-start-2">
+
+            <div class="history-slider swiper">
+                <div class="swiper-wrapper">
+                    <?php while (have_rows('history')) : the_row(); ?>
+
+                        <div data-year="<?php echo get_sub_field('year'); ?>" class="swiper-slide bg-l-gray flex gap-10">
+
+                            <div class="flex max-sm:flex-wrap-reverse gap-10">
+                                <div class="w-full sm:w-1/2 md:w-2/5 md:pt-8 lg:pt-16 xl:pt-20">
+                                    <h2 class="text-5xl sm:text-6xl md:text-8xl lg:text-year font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16"><?php echo get_sub_field('year'); ?></h2>
+                                    <?php if ($text = get_sub_field('text')) : ?>
+
+                                        <p class="sm:text-lg lg:text-xl "><?php echo $text; ?></p>
+
+                                    <?php endif; ?>
+                                </div>
+                                <div class="w-full sm:w-1/2 md:w-3/5">
+                                    <?php echo wp_get_attachment_image(get_sub_field('zdjecie'), 'standard', '', ['class' => 'w-full']); ?>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>
+
+                </div>
+                <div class="swiper-pagination history-pagination flex justify-between"></div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<?php endif; ?>
