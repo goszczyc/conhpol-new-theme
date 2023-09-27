@@ -30,6 +30,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "fslightbox": "^3.4.1",
     "swiper": "^10.2.0"
   }
 }

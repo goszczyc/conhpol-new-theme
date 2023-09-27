@@ -36,8 +36,8 @@
     <div class="swiper-slide">
         <?php if ($bg_image = get_sub_field('bg_image')) : ?>
 
-            <div class="backgeround col-start-1 col-span-12 row-start-1 row-span-1">
-                <?php wp_get_attachment_image($bg_image, 'banner', '', ['class' => 'object-cover']) ?>
+            <div class="col-start-1 col-span-12 row-start-1 row-span-1">
+                <?php echo wp_get_attachment_image($bg_image, 'banner', '', ['class' => 'object-cover']) ?>
             </div>
 
         <?php endif; ?>
