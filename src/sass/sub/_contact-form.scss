@@ -1,0 +1,105 @@
+.contact-form {
+    @apply grid xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-10;
+
+    &__group {
+        @apply relative mt-4;
+        &:focus-within,
+        &:has(input[data-is-filled="true"]),
+        &:has(textarea[data-is-filled="true"]) {
+            .contact-form__label {
+                @apply top-0 -translate-y-full scale-75 text-primary;
+            }
+            .contact-form__input {
+                @apply border-b-primary placeholder:opacity-100;
+            }
+        }
+        &:has(input[aria-required="true"]),
+        &:has(textarea[aria-required="true"]) {
+            .contact-form__label::after {
+                content: " *";
+                @apply text-primary;
+            }
+        }
+
+        &--message,
+        &--accept {
+            @apply col-span-full;
+        }
+    }
+
+    &__input {
+        @apply text-black placeholder:text-gray py-1 px-2 border-b-2 border-b-black border-solid w-full outline-none transition-colors placeholder:opacity-0 placeholder:transition-opacity placeholder:duration-300;
+
+        &--message {
+            @apply h-12 min-h-[3rem] resize-y;
+        }
+    }
+    &__label {
+        @apply absolute top-[1.25rem] left-0 align-middle px-2 py-1 -translate-y-1/2 transition-all duration-300 origin-left leading-none cursor-text;
+    }
+    &__acceptance {
+        @apply hidden;
+
+        & ~ span {
+            // display: block;
+            position: relative;
+            padding-left: 25px;
+            text-align: justify;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1.25em;
+                height: 1.25em;
+                border: black 1px solid;
+            }
+        }
+        &:checked ~ span {
+            &::before {
+                @apply bg-primary;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0.625em;
+                left: 0.625em;
+                width: 0.625em;
+                height: 0.45em;
+                border-left: 2px solid black;
+                border-bottom: 2px solid black;
+                transform: translate(-45%, -65%) rotate(-45deg);
+            }
+        }
+    }
+    &__submit {
+        @apply px-5 
+        py-[1em]
+        text-black
+        bg-primary
+        border
+        border-primary
+        border-solid
+        transition-colors
+        duration-300
+        hover:bg-black
+        hover:border-black
+        focus:bg-black
+        focus:border-black
+        focus:text-white
+        hover:text-white
+        cursor-pointer;
+    }
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+    @apply border-primary;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    @apply mt-2 mx-0 mb-0;
+}

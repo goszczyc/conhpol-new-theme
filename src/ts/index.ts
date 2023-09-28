@@ -6,6 +6,7 @@ import animateItemsIn_init from "./inits/animateItemsIn_init";
 import burgerMenu_init from "./inits/burgerMenu_init";
 import subMenus_init from "./inits/subMenus_init";
 import scrolledHeader_init from "./inits/scrolledHeader_init";
+import checkInput_init from "./inits/checkInput_init";
 
 document.addEventListener("DOMContentLoaded", () => {
     burgerMenu_init();
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
     animateItemsIn_init();
     subMenus_init();
     scrolledHeader_init();
+    checkInput_init();
 });
