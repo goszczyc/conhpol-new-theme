@@ -7,6 +7,7 @@ import burgerMenu_init from "./inits/burgerMenu_init";
 import subMenus_init from "./inits/subMenus_init";
 import scrolledHeader_init from "./inits/scrolledHeader_init";
 import checkInput_init from "./inits/checkInput_init";
+import clientsSldier_init from "./inits/clientsSlider_init.";
 
 document.addEventListener("DOMContentLoaded", () => {
     burgerMenu_init();
@@ -16,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
     subMenus_init();
     scrolledHeader_init();
     checkInput_init();
+    clientsSldier_init();
 });

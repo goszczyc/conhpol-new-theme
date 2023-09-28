@@ -9,7 +9,7 @@
                 <div>
                     <?php if ($division_name = get_sub_field('division_name')) : ?>
 
-                        <h2 class="text-heading mb-10">
+                        <h2 class="text-heading mb-10 decor faded-out">
                             <?php echo $division_name; ?>
                         </h2>
 
@@ -23,7 +23,7 @@
 
                             <div class="flex flex-col xs:flex-row mb-16">
 
-                                <div class="flex flex-col justify-center text-primary text-lg font-bold xs:w-1/2 border-b xs:border-b-0 text-center xs:text-left xs:border-r border-gray border-solid xs:pr-5 py-2 uppercase">
+                                <div class="flex flex-col justify-center text-primary text-lg font-bold xs:w-1/2 border-b xs:border-b-0 text-center xs:text-left xs:border-r border-gray border-solid xs:pr-5 py-2 uppercase decor faded-out">
 
                                     <?php if ($language = get_sub_field('language')) : ?>
 
@@ -32,7 +32,7 @@
                                     <?php endif; ?>
 
                                 </div>
-                                <div class="xs:w-1/2 text-gray text-center xs:text-left xs:pl-5 py-2">
+                                <div class="xs:w-1/2 text-gray text-center xs:text-left xs:pl-5 py-2 decor faded-out">
                                     <?php if ($name = get_sub_field('name')) : ?>
 
                                         <div class="uppercase text-lg font-medium">
@@ -78,12 +78,12 @@
         <?php if ($form_heading = get_field('form_heading')) : ?>
 
             <div class="mb-5">
-                <h2 class="text-heading">
+                <h2 class="text-heading decor faded-out">
                     <?php echo $form_heading; ?>
                 </h2>
                 <?php if ($form_subheading = get_field('form_subheading')) : ?>
 
-                    <p class="text-sm italic text-gray">
+                    <p class="text-sm italic text-gray decor faded-out">
                         <?php echo $form_subheading; ?>
                     </p>
 
@@ -93,7 +93,7 @@
             </div>
 
         <?php endif; ?>
-        <div id="contact-form">
+        <div id="contact-form decor faded-out">
             <?php echo do_shortcode('[contact-form-7 id="ae8038d" title="Formularz kontaktowy"]'); ?>
         </div>
     </div>
@@ -103,10 +103,10 @@
 
             <?php while (have_rows('locations')) : the_row(); ?>
 
-                <div class="">
+                <div>
                     <?php if ($locations_heading = get_sub_field('locations_heading')) : ?>
 
-                        <h2 class="text-heading mb-10">
+                        <h2 class="text-heading mb-10 decor faded-out">
                             <?php echo $locations_heading; ?>
                         </h2>
 
@@ -120,7 +120,7 @@
 
                             <div class="flex flex-col xs:flex-row mb-16">
 
-                                <div class="text-primary text-lg font-bold xs:w-1/2 border-b xs:border-b-0 text-center xs:text-left xs:border-r border-gray border-solid xs:pr-5 py-2 uppercase">
+                                <div class="text-primary text-lg font-bold xs:w-1/2 border-b xs:border-b-0 text-center xs:text-left xs:border-r border-gray border-solid xs:pr-5 py-2 uppercase decor faded-out">
 
                                     <?php if ($type = get_sub_field('type')) : ?>
 
@@ -129,7 +129,7 @@
                                     <?php endif; ?>
 
                                 </div>
-                                <address class="xs:w-1/2 text-gray text-center xs:text-left xs:pl-5 py-2 text-lg uppercase">
+                                <address class="xs:w-1/2 text-gray text-center xs:text-left xs:pl-5 py-2 text-lg uppercase decor faded-out">
                                     <?php if ($street = get_sub_field('street')) : ?>
 
                                         <div>
