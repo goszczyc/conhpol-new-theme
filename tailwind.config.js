@@ -32,7 +32,7 @@ module.exports = {
                 },
             },
             boxShadow: {
-                'sub-menu': '0 0 5px'
+                "sub-menu": "0 0 5px",
             },
             fontSize: {
                 xl: ["1.375rem", "2.75rem"],
@@ -40,6 +40,7 @@ module.exports = {
                 ilink: ["2.625rem", "3.875rem"],
                 "ilink-l": ["4.5rem", "3.875rem"],
                 year: ["6.375rem", "2.75rem"],
+                heading: ["2rem", "3.875rem"],
             },
         },
         screens: {
@@ -57,10 +58,10 @@ module.exports = {
         },
         colors: {
             primary: "#c09042",
-            secondary: '#DFB100',
+            secondary: "#DFB100",
             white: "#fefefe",
             "l-gray": "#f9f9f6",
-            gray: "#9b9b9b",
+            gray: "#cdcdcd",
             "d-gray": "#515151",
             dark: "#1f1f1f",
             current: "currentColor",

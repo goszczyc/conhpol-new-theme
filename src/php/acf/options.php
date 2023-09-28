@@ -13,4 +13,10 @@ if (function_exists('acf_add_options_page')) {
 		'menu_title' => 'Menu',
 		'parent_slug' => $parent['menu_slug']
 	));
+
+	$footer = acf_add_options_sub_page(array(
+		'page_title' => 'Stopka',
+		'menu_title' => 'Stopka',
+		'parent_slug' => $parent['menu_slug']
+	));
 }
