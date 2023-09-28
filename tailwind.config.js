@@ -6,10 +6,12 @@ module.exports = {
         "./header.php",
         "./footer.php",
         "./functions.php",
+        "./searchform.php",
         "./page-templates/**/*.php",
         "./template-parts/**/*.php",
         "./components/**/*.php",
         "./src/ts/**/*.ts",
+        "./src/php/**/*.php",
     ],
     theme: {
         extend: {
@@ -28,6 +30,9 @@ module.exports = {
                     "16%": { transform: "scale(0.95)" },
                     "24%": { transform: "scale(1)" },
                 },
+            },
+            boxShadow: {
+                'sub-menu': '0 0 5px'
             },
             fontSize: {
                 xl: ["1.375rem", "2.75rem"],
@@ -51,7 +56,8 @@ module.exports = {
             },
         },
         colors: {
-            primary: "#e30613",
+            primary: "#c09042",
+            secondary: '#DFB100',
             white: "#fefefe",
             "l-gray": "#f9f9f6",
             gray: "#9b9b9b",

@@ -1,4 +1,4 @@
-<?php
+<?php 
 function wp_get_menu_array($current_menu): array {
 	$menu_name = $current_menu; //menu slug
 	$locations = get_nav_menu_locations();

@@ -10,6 +10,8 @@ require_once __DIR__ . '/src/php/acf/options.php';
 require_once __DIR__ . '/src/php/menu/wp-menu-array.php';
 // Custom posts
 require_once __DIR__ . '/src/php/custom-posts/collections.php';
+// WPML custom Language selector
+require_once __DIR__ . '/src/php/WPML/language-selector.php';
 
 
 add_theme_support('title-tag');
@@ -96,29 +98,7 @@ add_filter(
 	}
 );
 
-function language_selector()
-{
-	$languages = apply_filters('wpml_active_languages', NULL, 'orderby=id&order=desc');
 
-	if (!empty($languages)) {
-		foreach ($languages as $l) {
-			$code = $l['language_code'];
-			$code = ($l['language_code'] == 'uk') ? 'en' : $code;
-
-			if (!$l['active']) {
-				$available =  array(
-					'code' => $code,
-					'link' => '<a href="' . $l['url'] . '" class="uppercase ml-2 p-1 hover:font-bold">' . $code . '</a>'
-				);
-			} else {
-				$current = array(
-					'code' => $code,
-					'link' => '<p href="' . $l['url'] . '" class="uppercase ml-2 p-1 font-bold hover:font-bold">' . $code . '</p>'
-				);
-			}
-		}
-	}
-}
 
 /////////////////////
 // FORCE WP UPDATE //
