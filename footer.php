@@ -106,9 +106,9 @@
 
             <?php endif; ?>
 
-            <?php if ($newsletter_heading = get_field('newsletter_heading')) : ?>
+            <?php if ($newsletter_heading = get_field('newsletter_heading', 'options')) : ?>
 
-                <h2 class="text-heading font-bold upperase">
+                <h2 class="text-heading font-bold upperase text-center uppercase mb-4">
                     <?php echo $newsletter_heading; ?>
                 </h2>
 

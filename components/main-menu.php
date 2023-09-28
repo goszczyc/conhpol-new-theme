@@ -19,7 +19,7 @@ $menu = wp_get_menu_array($args['menu']);
                     <button class="sub-close absolute top-10 right-10 w-10 h-10 "></button>
                     <?php foreach ($item['children'] as $child) : ?>
 
-                        <li class="px-32 mt-28 font-semibold max-lg:text-center">
+                        <li class="lg:px-32 mt-28 font-semibold max-lg:text-center">
                             <a href="<?php echo $child['url'] ?>" class="px-4 py-1.5">
                                 <?php echo $child['title'] ?>
                             </a>

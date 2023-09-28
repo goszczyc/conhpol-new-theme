@@ -15,7 +15,7 @@
 <body <?php body_class(); ?>>
 
 
-	<header class="header sticky top-0 left-0 bg-white py-6 z-50 transition-all duration-300">
+	<header class="header sticky top-0 left-0 bg-white py-6 z-[1000] transition-all duration-300">
 		<div class="container mx-auto flex lg:flex-col items-center px-5">
 			<?php if ($main_logo = get_field('main_logo', 'options')) : ?>
 

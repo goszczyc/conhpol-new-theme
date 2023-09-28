@@ -20,12 +20,29 @@
     }
 }
 
+@mixin scale-fontsize($fontsize, $scale: 0.4) {
+    font-size: $fontsize;
+    @for $i from length($breakpoints) * -1 through -1 {
+        @media (max-width: nth(nth($breakpoints, abs($i)), 2)) {
+            font-size: $fontsize * (1 - calc($scale/abs($i)));
+        }
+    }
+}
+$breakpoints: (
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+    xl: 1500px,
+);
+$primary-color: #c09042;
 @import "./sub/btn";
 @import "./sub/swiper-pagination";
 @import "./sub/history-slider";
 @import "./sub/header";
 @import "./sub/footer";
 @import "./sub/contact-form";
+@import "./sub/map";
 
 .decor {
     transform: translateY(50px);
