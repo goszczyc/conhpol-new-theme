@@ -53,7 +53,7 @@ module.exports = {
         },
         container: {
             screens: {
-                lg: "1764px",
+                lg: "1323px",
             },
         },
         colors: {
