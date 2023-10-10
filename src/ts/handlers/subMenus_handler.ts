@@ -2,6 +2,18 @@ const subMenus_handler = () => {
     const parents = document.querySelectorAll(".has-sub");
     const burger = document.querySelector("#burger");
 
+    document.addEventListener("click", (e) => {
+        const activeSubMenu = document.querySelector(".sub-menu--active");
+        const menuItems = Array.from(parents);
+        const eTarget = e.target as HTMLElement;
+
+        if (!activeSubMenu) return;
+
+        if (e.target != activeSubMenu && !menuItems.includes(eTarget)) {
+            activeSubMenu.classList.remove("sub-menu--active");
+        }
+    });
+
     // handle opening sub-menu
     parents.forEach((parent) => {
         parent.addEventListener("click", (e) => {

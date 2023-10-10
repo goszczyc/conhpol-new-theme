@@ -1,0 +1,34 @@
+.text-center-cmp {
+    margin-top: 95px;
+
+    h1,
+    h2 {
+        @include scale-fontsize($fontsize: 40px);
+        line-height: 1.2;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    p {
+        @include scale-fontsize($fontsize: 23px);
+    }
+    h3 {
+        color: $tertiary-color;
+        @include scale-fontsize($fontsize: 23px);
+        line-height: 1.6;
+        font-weight: 400;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    p {
+        color: $tertiary-color;
+        @include scale-fontsize($fontsize: 18px);
+        line-height: 2;
+        font-weight: 400;
+    }
+    &:last-child {
+        margin-bottom: 95px;
+    }
+}

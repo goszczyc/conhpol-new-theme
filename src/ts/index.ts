@@ -9,6 +9,7 @@ import scrolledHeader_init from "./inits/scrolledHeader_init";
 import checkInput_init from "./inits/checkInput_init";
 import clientsSldier_init from "./inits/clientsSlider_init.";
 import map_init from "./map/map_init";
+import sendCites from "./checkCites";
 
 document.addEventListener("DOMContentLoaded", () => {
     burgerMenu_init();
@@ -20,4 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
     checkInput_init();
     clientsSldier_init();
     map_init();
+    sendCites();
 });

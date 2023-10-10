@@ -22,9 +22,9 @@
                             <?php if ($logo = get_sub_field('logo')) : ?>
 
                                 <div class="swiper-slide">
-                                    <div class="p-12">
+                                    <!-- <div class="p-12 flex justify-center items-center"> -->
                                         <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'w-full max-w-[180px] mx-auto']); ?>
-                                    </div>
+                                    <!-- </div> -->
                                 </div>
 
                             <?php endif; ?>

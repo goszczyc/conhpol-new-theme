@@ -7,6 +7,6 @@
             </strong>
             <?php echo $heading['regular']; ?>
         </h1>
-    </div>
+    </div>1
 
 <?php endif; ?>

@@ -11,12 +11,14 @@ require_once __DIR__ . '/src/php/menu/wp-menu-array.php';
 // Custom posts
 require_once __DIR__ . '/src/php/custom-posts/collections.php';
 require_once __DIR__ . '/src/php/custom-posts/locations.php';
+require_once __DIR__ . '/src/php/custom-posts/cites.php';
 // custom tax
 require_once __DIR__ . '/src/php/custom-tax/filters.php';
 // WPML custom Language selector
 require_once __DIR__ . '/src/php/WPML/language-selector.php';
 // Ajax
 require_once __DIR__ . '/src/php/ajax/getLocations.php';
+require_once __DIR__ . '/src/php/ajax/citesForm.php';
 
 
 add_theme_support('title-tag');

@@ -8,6 +8,7 @@ get_header();
     <?php get_template_part(TMP_PART . 'Banner/banner-slider'); ?>
     <?php get_template_part(TMP_PART . 'about'); ?>
     <?php get_template_part(TMP_PART . 'new-collection'); ?>
+    <?php get_template_part(TMP_PART . 'our-offer'); ?>
 </main>
 
 <?php get_footer(); ?>

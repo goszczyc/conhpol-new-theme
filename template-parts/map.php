@@ -3,7 +3,7 @@ $parent_tax_id = 9;
 $filters = get_terms($args = array(
     'taxonomy' => 'filters',
     'hide_empty' => false,
-    'parent' => 13
+    'parent' => 9
 )); ?>
 
 
@@ -24,7 +24,7 @@ $filters = get_terms($args = array(
                         <?php foreach ($filters as $filter) :
                             $option = $filter->name; ?>
 
-                            <div class="map__search-filter-group col-6">
+                            <div class="map__search-filter-group w-1/2">
                                 <input class="map__search-filter-input" type="checkbox" name="filter" id="<?= $option; ?>" value="<?= $option; ?>">
                                 <label class="map__search-filter-label" for="<?= $option; ?>"><?= $option; ?></label>
                             </div>

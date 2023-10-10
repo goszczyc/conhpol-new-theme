@@ -1,6 +1,6 @@
 <?php
 
-get_header('sub');
+get_header();
 
 // the query
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -13,7 +13,7 @@ $args = array(
 );
 $search = new WP_Query($args); ?>
 <main class="main">
-    <section class="search-result container">
+    <section class="search-result container px-5 mx-auto">
 
         <?php if ($search->have_posts()) : ?>
 

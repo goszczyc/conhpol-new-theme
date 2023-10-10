@@ -113,7 +113,7 @@
                 </h2>
 
             <?php endif; ?>
-            <?php echo do_shortcode('[contact-form-7 id="5bb367d" title="Newsletter"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="a7d6e3a" title="Newsletter - nowy"]'); ?>
         </div>
     </div>
 

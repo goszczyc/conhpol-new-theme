@@ -94,7 +94,7 @@
 
         <?php endif; ?>
         <div id="contact-form decor faded-out">
-            <?php echo do_shortcode('[contact-form-7 id="ae8038d" title="Formularz kontaktowy"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="1ca1619" title="Formularz kontaktowy"]'); ?>
         </div>
     </div>
     <?php if (have_rows('locations')) : ?>

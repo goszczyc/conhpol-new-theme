@@ -1,0 +1,26 @@
+.certyficates {
+    margin-top: 2.8125rem;
+
+    &__title {
+        @include scale-fontsize($fontsize: 3.125rem);
+        margin-bottom: 2.8125rem;
+    }
+    &__logos {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 3.125rem;
+
+        .certyficates__logo {
+            width: 20%;
+            min-width: 7.5rem;
+            padding-inline: 20px;
+            margin-bottom: 1.25rem;
+            img {
+                width: 100%;
+                object-fit: contain;
+                max-height: 1.25rem;
+            }
+        }
+    }
+}

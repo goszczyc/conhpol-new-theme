@@ -33,7 +33,7 @@
 					</div>
 					<?php get_template_part(CMP . 'main-menu', '', ['menu' => 'main-nav']); ?>
 					<div class=" flex flex-col lg:flex-row items-center max-lg:order-3">
-						<a href="<?= esc_url(get_permalink(get_page_by_title('mapa'))); ?>" class="xl:mr-3.5 my-5 lg:my-0">
+						<a href="<?= esc_url(get_permalink(367)); ?>" class="xl:mr-3.5 my-5 lg:my-0">
 							<img src="<?php echo get_template_directory_uri(); ?>/dist/images/pin.png" alt="pin">
 						</a>
 						<?php echo get_search_form(); ?>
@@ -41,7 +41,7 @@
 				</div>
 				<?php if ($eu_logo = get_field('eu_logo', 'options')) : ?>
 
-					<div class="mx-2 lg:mx-0 lg:pl-44"><?php echo wp_get_attachment_image($eu_logo, 'eu_logo', '', ['class' => 'ml-auto']); ?></div>
+					<div class="absolute top-1/2 right-0 ml-2 lg:mx-0 lg:pl-44 -translate-y-1/2"><?php echo wp_get_attachment_image($eu_logo, 'eu_logo', '', ['class' => 'ml-auto']); ?></div>
 
 				<?php endif; ?>
 				<button id="burger" type="button" class="burger z-30">

@@ -36,6 +36,12 @@ $breakpoints: (
     xl: 1500px,
 );
 $primary-color: #c09042;
+$primary-color--hover: #DFB100;
+$secondary-color--hover: hsl(39, 70%, 50%);
+
+$tertiary-color: #bbbbbb;
+$transition-regular: 300ms ease-out;
+@import "./sub/old";
 @import "./sub/btn";
 @import "./sub/swiper-pagination";
 @import "./sub/history-slider";
@@ -43,6 +49,20 @@ $primary-color: #c09042;
 @import "./sub/footer";
 @import "./sub/contact-form";
 @import "./sub/map";
+@import "./sub/news";
+@import "./sub/components/certyficates";
+@import "./sub/components/collections";
+@import "./sub/components/materials";
+@import "./sub/components/one-image";
+@import "./sub/components/photos";
+@import "./sub/components/slider";
+@import "./sub/components/technology";
+@import "./sub/components/text-center";
+@import "./sub/components/title-banner";
+@import "./sub/components/title-txt";
+@import "./sub/components/video";
+@import "./sub/cites";
+@import "./sub/search";
 
 .decor {
     transform: translateY(50px);

@@ -1,5 +1,4 @@
 const historySlider_init = () => {
-    console.log('hist')
     const historySlider = document.querySelector(".history-slider");
 
     if (!historySlider) return;

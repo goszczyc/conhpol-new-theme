@@ -5,8 +5,6 @@ const animateItemsIn_init = () => {
 
     if (items.length === 0) return;
 
-    console.log(items);
-
     import("../handlers/animateItemsIn_handler").then((module) => {
         const animateItemsIn_handler = module.default;
 

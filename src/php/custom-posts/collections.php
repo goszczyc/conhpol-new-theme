@@ -36,7 +36,7 @@ function custom_post_type()
         'label'                 => __('Kolekcja', 'text_domain'),
         'description'           => __('Kolekcje', 'text_domain'),
         'labels'                => $labels,
-        'supports'              => array('title'),
+        'supports'              => array('title', 'thumbnail'),
         'hierarchical'          => false,
         'menu_icon'             => 'dashicons-open-folder',
         'public'                => true,
