@@ -7,6 +7,9 @@
     &__info {
         @apply text-sm leading-[1.125rem] mb-5;
     }
+    &__group {
+        @apply flex items-center;
+    }
     &__accept {
         @apply hidden;
 
@@ -45,22 +48,18 @@
         }
     }
     &__submit {
-        @apply px-5 
-        py-[1em]
-        text-white
-        w-full
-        mt-5
-        bg-black
-        border
-        border-black
-        border-solid
+        @apply bg-none
+        border-none
+        ml-5
+        leading-none
+        text-[17px]
+        uppercase
+        font-extralight
         transition-colors
         duration-300
-        hover:bg-white
-        focus:bg-white
-        focus:text-black
-        hover:text-black
-        cursor-pointer;
+        cursor-pointer
+        hover:text-primary
+        focus:text-primary;
     }
     &__policy {
         @apply text-[11px] leading-[1.125rem] text-center;
