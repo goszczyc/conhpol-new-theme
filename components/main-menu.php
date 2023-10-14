@@ -15,12 +15,12 @@ $menu = wp_get_menu_array($args['menu']);
             </a>
             <?php if ($item['children']) : ?>
 
-                <ul aria-hidden="true" class="sub-menu flex fixed top-0 left-0  flex-col justify-center py-5 px-5 h-screen bg-white -translate-x-full transition-transform duration-300 max-lg:w-screen z-[1000] lg:shadow-sub-menu">
+                <ul aria-hidden="true" class="sub-menu flex fixed top-0 left-0  flex-col pb-5 px-5 h-screen bg-white -translate-x-full transition-transform duration-300 max-lg:w-screen z-[1000] lg:shadow-sub-menu overflow-auto lg:min-w-[464px]">
                     <button class="sub-close absolute top-10 right-10 w-10 h-10 "></button>
                     <?php foreach ($item['children'] as $child) : ?>
 
-                        <li class="lg:px-32 mt-28 font-semibold max-lg:text-center">
-                            <a href="<?php echo $child['url'] ?>" class="px-4 py-1.5">
+                        <li class="lg:px-32 mt-[74px] font-semibold max-lg:text-center">
+                            <a href="<?php echo $child['url'] ?>" class="px-4">
                                 <?php echo $child['title'] ?>
                             </a>
                         </li>

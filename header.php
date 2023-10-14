@@ -15,7 +15,7 @@
 <body <?php body_class(); ?>>
 
 
-	<header class="header sticky top-0 left-0 bg-white py-6 z-[1000] transition-all duration-300">
+	<header class="header sticky top-0 left-0 bg-white pt-4 pb-1 z-[1000] transition-all duration-300 text-sm">
 		<div class="container mx-auto flex lg:flex-col items-center px-5">
 			<?php if ($main_logo = get_field('main_logo', 'options')) : ?>
 
@@ -27,23 +27,24 @@
 
 			<div class="flex relative justify-center items-center lg:w-full">
 
-				<div id="menu" class="fixed max-lg:top-0 max-lg:left-0 flex flex-col justify-center tems-center lg:relative lg:flex-row bg-white max-lg:w-screen max-lg:h-screen z-10">
-					<div class="flex justify-center font-semibold lg:ml-auto max-lg:order-2">
+				<nav id="menu" class="fixed max-lg:top-0 max-lg:left-0 flex flex-col justify-center tems-center lg:relative lg:flex-row bg-white max-lg:w-screen max-lg:h-screen z-10">
+					<div class="flex justify-center font-semibold lg:ml-auto">
 						<?php echo language_selector(); ?>
 					</div>
 					<?php get_template_part(CMP . 'main-menu', '', ['menu' => 'main-nav']); ?>
-					<div class=" flex flex-col lg:flex-row items-center max-lg:order-3">
-						<a href="<?= esc_url(get_permalink(367)); ?>" class="xl:mr-3.5 my-5 lg:my-0">
+					<div class=" flex flex-col lg:flex-row items-center">
+						<a href="<?= esc_url(get_permalink(367)); ?>" class="lg:mr-3.5 my-5 lg:my-0">
 							<img src="<?php echo get_template_directory_uri(); ?>/dist/images/pin.png" alt="pin">
 						</a>
 						<?php echo get_search_form(); ?>
 					</div>
-				</div>
-				<?php if ($eu_logo = get_field('eu_logo', 'options')) : ?>
+					<?php if ($eu_logo = get_field('eu_logo', 'options')) : ?>
 
-					<div class="absolute top-1/2 right-0 ml-2 lg:mx-0 lg:pl-44 -translate-y-1/2"><?php echo wp_get_attachment_image($eu_logo, 'eu_logo', '', ['class' => 'ml-auto']); ?></div>
+						<?php echo wp_get_attachment_image($eu_logo, 'eu_logo', '', ['class' => 'w-16 lg:absolute lg:top-1/2 lg:left-full ml-2 lg:mx-0 lg:ml-44 -translate-y-1/2']); ?>
 
-				<?php endif; ?>
+					<?php endif; ?>
+				</nav>
+
 				<button id="burger" type="button" class="burger z-30">
 					<div class="burger__bar burger__bar--top"></div>
 					<div class="burger__bar burger__bar--mid"></div>

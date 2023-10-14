@@ -11,12 +11,12 @@ function language_selector()
             if (!$l['active']) {
                 $lang =  array(
                     'code' => $code,
-                    'link' => '<a href="' . $l['url'] . '" class="uppercase mx-2.5 lg:mx-0 lg:ml-[14px] hover:text-primary transition-colors duration-300">' . $code . '</a>'
+                    'link' => '<a href="' . $l['url'] . '" class="py-4 uppercase mx-2.5 lg:mx-0 lg:ml-[14px] hover:text-primary transition-colors duration-300">' . $code . '</a>'
                 );
             } else {
                 $lang = array(
                     'code' => $code,
-                    'link' => '<p href="' . $l['url'] . '" class="uppercase mx-2.5 lg:mx-0 lg:ml-[14px] text-primary">' . $code . '</p>'
+                    'link' => '<p href="' . $l['url'] . '" class="py-4 uppercase mx-2.5 lg:mx-0 lg:ml-[14px] text-primary">' . $code . '</p>'
                 );
             }
 
