@@ -106,7 +106,7 @@
 
             <?php endif; ?>
 
-            <div class="py-4 max-w-[980px] mx-auto">
+            <div class="py-4 max-w-[980px] mx-auto flex flex-col items-center">
                 <?php if ($newsletter_heading = get_field('newsletter_heading', 'options')) : ?>
 
                     <h2 class="text-sm font-extralight uppercase text-center leading-none mb-4">
@@ -114,7 +114,7 @@
                     </h2>
 
                 <?php endif; ?>
-                <?php echo do_shortcode('[contact-form-7 id="a7d6e3a" title="Newsletter - nowy"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="9fdc689" title="Newsletter"]'); ?>
             </div>
         </div>
     </div>
