@@ -11,7 +11,7 @@
                 </div>
 
             <?php endif; ?>
-            <div class="flex flex-col items-center relative sm:items-start opacity-0 col-start-1 col-span-full sm:col-start-8 sm:col-span-5 row-start-1 px-5 sm:px-0 py-20 animate-fadeIn ">
+            <div class="flex flex-col items-center relative sm:items-start opacity-0 col-start-1 col-span-full sm:col-start-8 sm:col-span-5 row-start-1 px-5 sm:px-0 sm:pr-10 py-20 animate-fadeIn ">
                 <?php if ($heading = get_sub_field('heading')) : ?>
                     <h2 class="leading-snug uppercase font-bold text-white mb-[0.73em] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                         <?php echo $heading; ?>

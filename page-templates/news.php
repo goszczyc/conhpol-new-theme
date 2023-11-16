@@ -20,7 +20,7 @@ get_header();
     <?php if ($blog->have_posts()) : ?>
 
         <section class="blog container px-5 mx-auto">
-            <div class="flex flex-wrap -mx-5">
+            <div class="flex flex-wrap -mx-5 perspective">
 
                 <?php while ($blog->have_posts()) :
                     $blog->the_post();

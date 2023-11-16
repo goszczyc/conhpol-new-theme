@@ -7,7 +7,6 @@
         position: relative;
         align-items: center;
         min-height: 170px;
-        margin-top: 80px;
         -webkit-overflow-scrolling: touch;
         // flex-wrap: wrap;
         @apply max-xs:overflow-auto;
@@ -28,11 +27,21 @@
             writing-mode: vertical-lr;
             width: auto;
             height: min-height;
-            font-size: 30px;
+            font-size: 10px;
             padding-top: 36px;
             transform-origin: center;
             transform: rotateZ(180deg);
             transition: transform 300ms;
+
+            @media (min-width: 576px) {
+                font-size: 20px;
+            }
+            @media (min-width: 992px) {
+                font-size: 26px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 30px;
+            }
 
             &::before {
                 content: "";

@@ -8,7 +8,7 @@ if ($images = get_sub_field($component)) :
       <?php foreach ($images as $image) :
         $col = ($i == 2) ? 'w-full' : 'w-1/2';
       ?>
-        <div class="images__image w-10/12 xs:<?= $col; ?> lg:w-4/12">
+        <div class="images__image px-5 w-10/12 xs:<?= $col; ?> lg:w-4/12">
 
           <?= wp_get_attachment_image($image, 'full'); ?>
 

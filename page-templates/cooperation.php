@@ -10,7 +10,8 @@ get_header();
     <?php get_template_part(TMP_PART . 'Banner/banner'); ?>
     <?php get_template_part(TMP_PART . 'cooperation-cols'); ?>
     <?php get_template_part(TMP_PART . 'clients-slider'); ?>
-    <?php get_template_part(TMP_PART . '/shmkr-cols'); ?>
+    <?php get_template_part(TMP_PART . 'shmkr-cols'); ?>
+    <?php get_template_part(TMP_PART . 'layouts'); ?>
 
 </main>
 

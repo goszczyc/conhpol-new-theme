@@ -13,9 +13,9 @@
         <?php endif; ?>
 
 
-        <div class="grid xl:grid-cols-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
 
-            <div class="lg:col-start-2 lg:col-span-10 decor faded-out">
+            <div class="col-span-full lg:col-start-2 lg:col-span-10 decor faded-out">
                 <div class="clients-slider swiper">
                     <div class="swiper-wrapper">
                         <?php while (have_rows('clients_slider')) : the_row(); ?>

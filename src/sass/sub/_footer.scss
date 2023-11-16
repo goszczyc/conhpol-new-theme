@@ -1,12 +1,13 @@
+.footer {
+    box-shadow: 0 0 5px;
+}
 .newsletter-form {
     @apply w-full mx-auto;
 
     &__input {
-        @apply bg-white placeholder:text-black leading-[3.875rem] px-4 w-full border border-solid border-black;
+        @apply bg-white placeholder:text-black leading-[3.875rem] px-4 w-full border border-solid border-black rounded xs:rounded-none;
     }
-    &__info {
-        @apply text-sm leading-[1.125rem] mb-5;
-    }
+
     &__group {
         @apply flex items-center;
     }
@@ -48,9 +49,12 @@
         }
     }
     &__submit {
-        @apply bg-none
+        @apply bg-black text-white
+        xs:bg-transparent
+        xs:text-black
         border-none
-        ml-5
+        p-2.5
+        ml-2.5
         leading-none
         text-[17px]
         uppercase

@@ -3,7 +3,7 @@
 
         <?php if ($text_1 = get_field('text_1')) : ?>
 
-            <div class="md:w-5/6 prose-p:text-lg xs:prose-p:text-xl sm:prose-p:text-lg md:prose-p:text-xl mb-10 pt-6 decor faded-out">
+            <div class="md:w-5/6 standard-text mb-10 pt-6 decor faded-out">
                 <?php if ($history_heading = get_field('history_heading')) : ?>
                     <h2 class="text-5xl mb-6 font-bold uppercase"><?php echo $history_heading; ?></h2>
                 <?php endif; ?>
@@ -51,7 +51,7 @@
 
         <?php if ($text_2 = get_field('text_2')) : ?>
 
-            <div class="md:w-5/6 prose-p:text-lg xs:prose-p:text-xl sm:prose-p:text-lg md:prose-p:text-xl decor faded-out">
+            <div class="md:w-5/6 standard-text decor faded-out">
                 <?php echo $text_2; ?>
             </div>
 

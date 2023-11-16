@@ -7,9 +7,9 @@ if (have_rows($component)) :  $i = 1; ?>
 
     <div class="collections container mx-auto px-5">
 
-      <div class="flex flex-wrap -ml-5 -mr-5 <?php if ($i < 0) echo $revClass; ?>">
+      <div class="flex flex-wrap -mx-5 <?php if ($i < 0) echo $revClass; ?>">
         <?php if ($description = get_sub_field('description')) : ?>
-          <div class="collections__text w-full sm:w-1/2">
+          <div class="collections__text px-5 w-full sm:w-1/2">
             <?= $description; ?>
 
 
@@ -46,7 +46,7 @@ if (have_rows($component)) :  $i = 1; ?>
 
         <?php if ($image = get_sub_field('image')) : ?>
 
-          <div class="collections__image w-full sm:w-1/2">
+          <div class="collections__image px-5 w-full sm:w-1/2">
             <?= wp_get_attachment_image($image, 'full'); ?>
 
             <?php if ($image_hover = get_sub_field('image_hover')) : ?>

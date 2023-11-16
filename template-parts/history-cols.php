@@ -18,7 +18,7 @@
 
                 <?php if ($text = get_sub_field('text')) : ?>
 
-                    <div class="flex flex-col justify-center prose sm:w-1/2 prose-p:text-lg xs:prose-p:text-xl sm:prose-p:text-lg md:prose-p:text-xl prose-p:text-black prose-p:max-w-full max-w-full prose-p:mb-12 prose-p:last-of-type:mb-0 py-5 flex-shrink-0 px-5 decor faded-out">
+                    <div class="flex flex-col justify-center standard-text sm:w-1/2 py-5 px-5 decor faded-out">
 
                         <?php echo $text; ?>
 

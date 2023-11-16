@@ -1,6 +1,6 @@
-<footer class="border-t border-solid border-t-gray">
-    <div class="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 px-5 mx-auto pt-[60px] max-w-[1102.48px]">
-        <div class="col-span-full md:col-span-1">
+<footer class="border-t border-solid border-t-gray footer">
+    <div class="container grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-x-10 xs:gap-10 px-5 mx-auto pt-[60px] max-w-[1102.48px]">
+        <div class="col-span-full md:col-span-1 mb-10 xs:mb-0">
             <?php if ($social_heading = get_field('social_heading', 'options')) : ?>
 
                 <h3 class="font-extralight leading-none  uppercase mb-[.6em] text-center md:text-left">
@@ -28,17 +28,23 @@
 
             <?php endif; ?>
         </div>
-        <div class="menu">
+        <div class="menu max-md:col-start-1">
 
             <?php get_template_part(CMP . 'footer-menu', '', ['menu' => 'footer-menu']); ?>
 
         </div>
-        <div class="legal">
+        <div class="legal col-start-1 xs:col-start-2 row-start-2 md:row-start-1">
+            <?php if ($legal_heading = get_field('legal_heading', 'options')) : ?>
 
+                <h3 class="font-extralight leading-none mb-[.6em] uppercase">
+                    <?php echo $legal_heading; ?>
+                </h3>
+
+            <?php endif; ?>
             <?php get_template_part(CMP . 'footer-menu', '', ['menu' => 'footer-policies']); ?>
 
         </div>
-        <div class="contact col-span-full sm:col-span-1">
+        <div class="contact row-start-2 col-start-2 xs:col-start-3 row-span-2 md:row-start- md:col-start-4 xs:row-span-1">
 
             <?php if ($contact_heading = get_field('contact_heading', 'options')) : ?>
 
@@ -81,7 +87,7 @@
 
         <?php if ($company_name = get_field('company_name', 'options')) : ?>
 
-            <div class="text-center text-[30px] leading-8 py-5">
+            <div class="text-center text-[24px] xs:text-[30px] leading-8 py-5">
                 <?php echo $company_name; ?>
             </div>
 
@@ -93,7 +99,9 @@
     ?>
     <div class="bg-gray">
         <div class="container px-5 mx-auto">
-            <?php if ($application_info = get_field('application_info', 'options')) : ?>
+            <?php
+            $application_info = get_field('application_info', 'options');
+            if ($application_info['text']) : ?>
 
                 <div class="text-center text-xs font-extralight tracking-[2.2px] p-5 border-b border-solid border-black">
                     <p>
@@ -121,7 +129,7 @@
 
     <div class="container flex justify-center items-center px-5 py-4 mx-auto">
         <div class="text-gray text-[10px] leading-none text-center">
-             &copy; <?php echo date('Y'); ?> Conhpol <?php _e('All rights reserved'); ?>
+            &copy; <?php echo date('Y'); ?> Conhpol <?php _e('All rights reserved'); ?>
         </div>
     </div>
 

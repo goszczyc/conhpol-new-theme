@@ -25,13 +25,13 @@ const burgerMenuHandler = (burger: HTMLButtonElement) => {
     }
 
     function blockScroll(body, isMenuShown) {
-        if (isMenuShown) {
-            body.style.height = "100vh";
-            body.style.overflow = "hidden";
-            return;
-        }
-        body.style.height = "unset";
-        body.style.overflow = "unset";
+        // if (isMenuShown) {
+        //     body.style.height = "100vh";
+        //     body.style.overflow = "hidden";
+        //     return;
+        // }
+        // body.style.height = "unset";
+        // body.style.overflow = "unset";
     }
 };
 

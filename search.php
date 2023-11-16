@@ -3,7 +3,6 @@
 get_header();
 
 // the query
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $s = get_search_query();
 $args = array(
     's' => $s,

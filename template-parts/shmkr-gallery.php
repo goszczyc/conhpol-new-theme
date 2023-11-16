@@ -1,5 +1,5 @@
 <?php if ($shmkr_gallery = get_field('shmkr_gallery')) : ?>
-    <div class="container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-10 px-5 mx-auto">
+    <div class="container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-10 px-5 mx-auto mb-10">
 
         <?php foreach ($shmkr_gallery as $image) : ?>
 

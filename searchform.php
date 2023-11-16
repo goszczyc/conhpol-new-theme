@@ -5,6 +5,6 @@
         </label>
         
         <input class="searchbar lg:absolute left-full bg-primary text-xs leading-loose w-28 px-3.5 border-2 border-solid border-primary rounded-full outline-none mt-5 lg:mt-0 lg:ml-5 focus:bg-secondary placeholder:text-black 
-        opacity-0 flex-shrink-0 transition-all duration-300" type="text" name="search" id="search" value="<?php the_search_query(); ?>" placeholder="<?= translate('Search', 'conhpol'); ?>" />
+        opacity-0 flex-shrink-0 transition-all duration-300" type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?= translate('Search', 'conhpol'); ?>" />
     </div>
 </form>

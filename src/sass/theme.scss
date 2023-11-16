@@ -36,10 +36,10 @@ $breakpoints: (
     xl: 1500px,
 );
 $primary-color: #c09042;
-$primary-color--hover: #DFB100;
+$primary-color--hover: #dfb100;
 $secondary-color--hover: hsl(39, 70%, 50%);
 
-$tertiary-color: #bbbbbb;
+$tertiary-color: #000;
 $transition-regular: 300ms ease-out;
 @import "./sub/old";
 @import "./sub/btn";
@@ -52,7 +52,7 @@ $transition-regular: 300ms ease-out;
 @import "./sub/news";
 @import "./sub/components/certyficates";
 @import "./sub/components/collections";
-@import "./sub/components/materials"; 
+@import "./sub/components/materials";
 @import "./sub/components/one-image";
 @import "./sub/components/photos";
 @import "./sub/components/slider";
@@ -84,6 +84,77 @@ $transition-regular: 300ms ease-out;
 .faded-out {
     transform: translateY(50px);
     opacity: 0;
+}
+
+.standard-heading {
+    color: $tertiary-color;
+    @include scale-fontsize($fontsize: 23px);
+    line-height: 1.6;
+    font-weight: 400;
+    h3 {
+        color: $tertiary-color;
+        @include scale-fontsize($fontsize: 23px);
+        line-height: 1.6;
+        font-weight: 400;
+    }
+}
+
+.main-heading {
+    @include scale-fontsize($fontsize: 40px);
+    line-height: 1.2;
+    font-weight: 400;
+    h1,
+    h2 {
+        @include scale-fontsize($fontsize: 40px);
+        line-height: 1.2;
+    }
+    &.font-bold {
+        font-weight: bold;
+    }
+}
+
+.standard-text {
+    color: $tertiary-color;
+    @include scale-fontsize($fontsize: 18px);
+    line-height: 2;
+    font-weight: 400;
+    p {
+        color: $tertiary-color;
+        @include scale-fontsize($fontsize: 18px);
+        line-height: 2;
+        font-weight: 400;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+.standard-list {
+    li {
+        @include scale-fontsize($fontsize: 18px);
+        margin-bottom: 0.25rem;
+    }
+}
+.perspective {
+    perspective: 1000px;
+}
+.styled-lists {
+    ul {
+        list-style-type: disc;
+        list-style-position: outside;
+        padding-left: 20px;
+    }
+    ol {
+        list-style-type: decimal;
+        list-style-position: outside;
+        padding-left: 20px;
+
+        ol {
+            list-style-type: lower-alpha;
+        }
+    }
 }
 
 @keyframes appear {

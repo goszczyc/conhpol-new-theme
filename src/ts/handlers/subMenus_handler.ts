@@ -33,19 +33,19 @@ const subMenus_handler = () => {
 
     // handle closing sub-menu
 
-    // const closeButtons = document.querySelectorAll(".sub-close");
+    const closeButtons = document.querySelectorAll(".sub-close");
 
-    // closeButtons.forEach((closeBtn) => {
-    //     closeBtn.addEventListener("click", (e) => {
-    //         e.preventDefault();
-    //         const currentItem = e.currentTarget as HTMLButtonElement;
-    //         const parent = currentItem.closest(".sub-menu");
+    closeButtons.forEach((closeBtn) => {
+        closeBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const currentItem = e.currentTarget as HTMLButtonElement;
+            const parent = currentItem.closest(".sub-menu");
 
-    //         parent.classList.remove("sub-menu--active");
-    //         parent.setAttribute("aria-hidden", "true");
-    //         burger.classList.remove("hidden");
-    //     });
-    // });
+            parent.classList.remove("sub-menu--active");
+            parent.setAttribute("aria-hidden", "true");
+            burger.classList.remove("hidden");
+        });
+    });
 };
 
 export default subMenus_handler;

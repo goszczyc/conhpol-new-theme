@@ -12,6 +12,7 @@ get_header();
     <?php get_template_part(TMP_PART . '/shmkr-cols'); ?>
     <?php get_template_part(TMP_PART . '/shmkr-images-bar'); ?>
     <?php get_template_part(TMP_PART . '/shmkr-gallery'); ?>
+    <?php get_template_part(TMP_PART . 'layouts'); ?>
     
 </main>
 

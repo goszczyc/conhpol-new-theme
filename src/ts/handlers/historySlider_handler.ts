@@ -5,10 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const historySlider_handle = () => {
+    const initSlide = document.querySelector('[data-initial]') as HTMLElement;
     const slider = new Swiper(".history-slider", {
         modules: [EffectFade, Pagination],
         spaceBetween: 40,
         effect: "fade",
+        initialSlide: parseInt(initSlide.dataset.initial),
         pagination: {
             el: ".history-pagination",
             clickable: true,

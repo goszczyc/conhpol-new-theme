@@ -12,7 +12,8 @@ get_header();
     <?php get_template_part(TMP_PART . 'history-cols'); ?>
     <?php get_template_part(TMP_PART . 'history-slider'); ?>
     <?php get_template_part(TMP_PART . 'history-last'); ?>
-    
+    <?php get_template_part(TMP_PART . 'layouts'); ?>
+
 </main>
 
 <?php get_footer(); ?>

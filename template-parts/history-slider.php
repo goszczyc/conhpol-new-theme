@@ -1,4 +1,6 @@
-<?php if (have_rows('history')) : ?>
+<?php if (have_rows('history')) :
+    $i = 0;
+?>
 
 
     <section class="bg-l-gray mb-16">
@@ -7,16 +9,17 @@
 
                 <div class="history-slider swiper pt-20 pb-20 ">
                     <div class="swiper-wrapper">
+
                         <?php while (have_rows('history')) : the_row(); ?>
 
-                            <div data-year="<?php echo get_sub_field('year'); ?>" class="swiper-slide bg-l-gray">
+                            <div <?php if (get_sub_field('year') == '2008') : ?> data-initial="<?php echo $i; ?> <?php endif; ?>" data-year="<?php echo get_sub_field('year'); ?>" class="swiper-slide bg-l-gray">
 
                                 <div class="flex max-sm:flex-wrap-reverse gap-10">
                                     <div class="w-full sm:w-1/2 md:w-2/5 md:pt-8 lg:pt-16 xl:pt-20">
                                         <h2 class="text-5xl sm:text-6xl md:text-8xl lg:text-year font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16"><?php echo get_sub_field('year'); ?></h2>
                                         <?php if ($text = get_sub_field('text')) : ?>
 
-                                            <p class="sm:text-lg lg:text-xl "><?php echo $text; ?></p>
+                                            <p class="standard-text"><?php echo $text; ?></p>
 
                                         <?php endif; ?>
                                     </div>
@@ -27,10 +30,15 @@
 
                             </div>
 
-                        <?php endwhile; ?>
+                        <?php $i++;
+                        endwhile; ?>
 
                     </div>
-                    <div class="swiper-pagination history-pagination flex justify-between"></div>
+                    <div class="px-4 xs:px-8 lg:px-12">
+                        <div class="flex -mx-4 xs:-mx-8 lg:-mx-12 mt-20">
+                            <div class="swiper-pagination history-pagination flex justify-between px-4 xs:px-8 lg:px-12"></div>
+                        </div>
+                    </div>
                 </div>
 
 

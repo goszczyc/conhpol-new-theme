@@ -4,9 +4,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<title><?php echo wp_title(); ?></title>
 	<?php wp_head(); ?>
 
 </head>
@@ -16,16 +13,25 @@
 
 
 	<header class="header sticky top-0 left-0 bg-white pt-4 pb-1 z-[1000] transition-all duration-300 text-sm">
-		<div class="container mx-auto flex lg:flex-col items-center px-5">
-			<?php if ($main_logo = get_field('main_logo', 'options')) : ?>
+		<div class="container mx-auto flex lg:flex-col justify-between items-center px-5">
+			<div class="lg:relative lg:w-full lg:mb-3.5">
+				<?php if ($main_logo = get_field('main_logo', 'options')) : ?>
 
-				<a href="<?php echo get_home_url(); ?>" class="lg:mb-3.5 block w-full lg:w-max">
-					<?php echo wp_get_attachment_image($main_logo, 'main_logo', '', ['class' => 'w-28 lg:w-48']); ?>
-				</a>
+					<a href="<?php echo get_home_url(); ?>" class="block w-full lg:w-max lg:mx-auto">
+						<?php echo wp_get_attachment_image($main_logo, 'main_logo', '', ['class' => 'w-28 lg:w-48']); ?>
+					</a>
 
-			<?php endif; ?>
+				<?php endif; ?>
+				<?php if (($eu_logo = get_field('eu_logo', 'options')) && $eu_link = get_field('eu_link', 'options')) : ?>
 
-			<div class="flex relative justify-center items-center lg:w-full">
+					<a href="<?php echo esc_url($eu_link); ?>" class="absolute right-20 top-1/2 -translate-y-[15%] lg:right-0 lg:-translate-y-1/3">
+						<?php echo wp_get_attachment_image($eu_logo, 'eu_logo', '', ['class' => 'w-10 xs:w-12 lg:w-16']); ?></a>
+
+
+				<?php endif; ?>
+			</div>
+
+			<div class="flex relative lg:justify-center items-center lg:w-full">
 
 				<nav id="menu" class="fixed max-lg:top-0 max-lg:left-0 flex flex-col justify-center tems-center lg:relative lg:flex-row bg-white max-lg:w-screen max-lg:h-screen z-10">
 					<div class="flex justify-center font-semibold lg:ml-auto">
@@ -38,11 +44,7 @@
 						</a>
 						<?php echo get_search_form(); ?>
 					</div>
-					<?php if ($eu_logo = get_field('eu_logo', 'options')) : ?>
 
-						<?php echo wp_get_attachment_image($eu_logo, 'eu_logo', '', ['class' => 'w-16 lg:absolute lg:top-1/2 lg:left-full ml-2 lg:mx-0 lg:ml-44 -translate-y-1/2']); ?>
-
-					<?php endif; ?>
 				</nav>
 
 				<button id="burger" type="button" class="burger z-30">
