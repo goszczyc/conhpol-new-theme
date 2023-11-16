@@ -1,6 +1,7 @@
 declare let adminUrl: any;
 
 const fetch_init = async (data) => {
+    console.log('test')
     let response = await fetch(adminUrl.ajaxurl, {
         method: "POST",
         body: data,

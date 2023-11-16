@@ -23,6 +23,8 @@ const subMenus_handler = () => {
 
             const sub = currentItem.nextElementSibling;
 
+            const activeSubMenu = document.querySelector(".sub-menu--active");
+            if (activeSubMenu && sub !== activeSubMenu) activeSubMenu.classList.remove("sub-menu--active");
             sub.classList.add("sub-menu--active");
             sub.setAttribute("aria-hidden", "false");
             burger.classList.add("hidden");

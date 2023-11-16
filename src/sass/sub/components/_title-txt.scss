@@ -21,8 +21,7 @@
     &__text {
         padding-bottom: 70px;
         margin-bottom: 95px;
-        border-bottom: 1px solid $tertiary-color;
-
+        border-bottom: 1px solid #bbb;
         h3 {
             color: $tertiary-color;
             @include scale-fontsize($fontsize: 23px);

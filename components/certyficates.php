@@ -4,15 +4,15 @@ if ($certyficates = get_sub_field($component)) :
   $logos = $certyficates['logos'];
 ?>
 
-  <div class="certyficates container">
-    <div class="row">
-      <h2 class="certyficates__title col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="certyficates container px-5 mx-auto">
+    <div class="flex flex-wrap -mx-5">
+      <h2 class="certyficates__title w-full px-5 sm:w-1/3 md:w-4/12 lg:w-3/12">
         <?= $title; ?>
       </h2>
-      <div class="certyficates__logos col-12 col-sm-6 col-md-8 col-lg-9">
+      <div class="certyficates__logos grid grid-cols-3 gap-5 w-full items-center px-5 sm:w-2/3 md:w-8/12 lg:w-9/12">
 
         <?php foreach ($logos as $logo) : ?>
-          <div class="certyficates__logo">
+          <div class="certyficates__logo flex h-full justify-center items-center">
             <?= wp_get_attachment_image($logo, 'full'); ?>
           </div>
         <?php endforeach; ?>

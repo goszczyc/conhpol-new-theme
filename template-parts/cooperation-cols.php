@@ -2,7 +2,7 @@
     <?php if ($cooperation_heading = get_field('cooperation_heading')) : ?>
 
 
-        <h1 class="text-5xl uppercase text-center mb-20">
+        <h1 class="main-heading uppercase text-center mb-20">
             <strong class="font-bold">
                 <?php echo $cooperation_heading['strong']; ?>
             </strong>
@@ -15,10 +15,10 @@
     <?php if ($cooperation_cols = get_field('cooperation_cols')) : ?>
 
         <div class="grid sm:grid-cols-2 xl:grid-cols-12 gap-10">
-            <div class="xl:col-span-5 xl:col-start-2 prose w-full prose-p:text-lg xs:prose-p:text-xl sm:prose-p:text-lg md:prose-p:text-xl prose-p:mb-5 prose-p:text-black prose-li:text-lg xs:prose-li:text-xl sm:prose-li:text-lg md:prose-li:text-xl prose-li:text-black prose-li:accent-black max-w-full prose-li:mb-1">
+            <div class="xl:col-span-5 xl:col-start-2 w-full standard-text standard-list max-w-full">
                 <?php echo $cooperation_cols['text_left']; ?>
             </div>
-            <div class="xl:col-span-5 prose w-full prose-p:text-lg xs:prose-p:text-xl sm:prose-p:text-lg md:prose-p:text-xl prose-p:mb-5 prose-p:text-black max-w-full prose-li:text-lg xs:prose-li:text-xl sm:prose-li:text-lg md:prose-li:text-xl prose-li:text-black prose-li:accent-black prose-li:mb-1">
+            <div class="xl:col-span-5 prose w-full standard-text max-w-full standard-list">
                 <?php echo $cooperation_cols['text_right']; ?>
             </div>
         </div>

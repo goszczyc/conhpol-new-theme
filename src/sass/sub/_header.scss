@@ -81,6 +81,7 @@
 }
 
 .sub-close {
+    @apply lg:hidden;
     &::after {
         content: "";
         position: absolute;

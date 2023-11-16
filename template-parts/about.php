@@ -12,10 +12,10 @@
     <?php if (($heading = get_field('about_heading')) && ($text = get_field('about_text'))) : ?>
 
         <div class="col-start-1 col-span-full xs:col-start-2 xs:col-span-10 md:col-start-7 md:col-span-6 flex flex-col justify-center items-center text-center p-5">
-            <h2 class="text-3xl xs:text-4xl md:text-5xl text-bold uppercase font-bold mb-[1.5em]">
+            <h2 class="main-heading uppercase font-bold mb-[1.5em]">
                 <?php echo $heading; ?>
             </h2>
-            <p class="text-l xs:text-xl max-w-[548px]">
+            <p class="standard-text max-w-[548px]">
                 <?php echo $text; ?>
             </p>
         </div>

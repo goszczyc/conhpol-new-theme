@@ -1,6 +1,6 @@
 <?php if (have_rows('even-cols')) : ?>
 
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 grid-flow-row-dense px-5">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 grid-flow-row-dense px-5 mb-10">
 
         <?php while (have_rows('even-cols')) : the_row(); ?>
 

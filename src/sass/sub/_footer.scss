@@ -1,11 +1,15 @@
+.footer {
+    box-shadow: 0 0 5px;
+}
 .newsletter-form {
-    @apply w-full max-w-[400px] flex flex-col items-center mx-auto;
+    @apply w-full mx-auto;
 
     &__input {
-        @apply bg-white placeholder:text-black leading-[3.875rem] px-4 mb-4 w-full;
+        @apply bg-white placeholder:text-black leading-[3.875rem] px-4 w-full border border-solid border-black rounded xs:rounded-none;
     }
-    &__info {
-        @apply text-sm leading-[1.125rem] mb-5;
+
+    &__group {
+        @apply flex items-center;
     }
     &__accept {
         @apply hidden;
@@ -45,29 +49,27 @@
         }
     }
     &__submit {
-        @apply px-5 
-        py-[1em]
-        text-white
-        w-full
-        mt-5
-        bg-black
-        border
-        border-black
-        border-solid
+        @apply bg-black text-white
+        xs:bg-transparent
+        xs:text-black
+        border-none
+        p-2.5
+        ml-2.5
+        leading-none
+        text-[17px]
+        uppercase
+        font-extralight
         transition-colors
         duration-300
-        hover:bg-white
-        focus:bg-white
-        focus:text-black
-        hover:text-black
-        cursor-pointer;
+        cursor-pointer
+        hover:text-primary
+        focus:text-primary;
     }
-    &__policy {
-        @apply text-[11px] leading-[1.125rem] text-center;
-
-        a {
-            @apply font-bold underline hover:text-primary focus:text-primary transition-colors;
-        }
+    &__info {
+        @apply text-[11px] leading-[1.125rem]  font-extralight w-full;
+    }
+    .wpcf7-spinner {
+        display: none;
     }
 }
 .wpcf7-list-item {

@@ -2,14 +2,14 @@
 if (have_rows($component)) :  $i = 1; ?>
   <?php while (have_rows($component)) : the_row(); ?>
     <?php
-    $revClass = 'flex-sm-row-reverse';
+    $revClass = 'sm:flex-row-reverse';
     ?>
 
-    <div class="collections container">
+    <div class="collections container mx-auto px-5">
 
-      <div class="row <?php if ($i < 0) echo $revClass; ?>">
+      <div class="flex flex-wrap -mx-5 <?php if ($i < 0) echo $revClass; ?>">
         <?php if ($description = get_sub_field('description')) : ?>
-          <div class="collections__text col-12 col-sm-6">
+          <div class="collections__text px-5 w-full sm:w-1/2">
             <?= $description; ?>
 
 
@@ -46,7 +46,7 @@ if (have_rows($component)) :  $i = 1; ?>
 
         <?php if ($image = get_sub_field('image')) : ?>
 
-          <div class="collections__image col-12 col-sm-6">
+          <div class="collections__image px-5 w-full sm:w-1/2">
             <?= wp_get_attachment_image($image, 'full'); ?>
 
             <?php if ($image_hover = get_sub_field('image_hover')) : ?>

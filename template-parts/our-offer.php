@@ -1,4 +1,4 @@
-<div class="container px-5 mx-auto mb-32 xl:grid xl:grid-cols-12">
+<div class="container px-5 mx-auto mb-32 grid grid-cols-1 xl:grid-cols-12">
     <div class="xl:col-start-2 xl:col-span-10">
         <?php if ($offer_heading = get_field('offer_heading')) : ?>
             <h2 class="text-5xl uppercase text-center mb-20 decor faded-out">
@@ -17,4 +17,4 @@
 
         <?php endif; ?>
     </div>
-</div>1
+</div>

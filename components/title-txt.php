@@ -10,7 +10,7 @@ if (have_rows($repeater_name)) :
         $title = get_sub_field('title');
         $text = get_sub_field('text');
       ?>
-        <div class="section-tt__title w-full xs:w-5/12 md:w-1/2">
+        <div class="section-tt__title w-full px-5 xs:w-5/12 md:w-1/2">
           <?php if ($title) : ?>
 
             <?= $title; ?>
@@ -18,7 +18,7 @@ if (have_rows($repeater_name)) :
           <?php endif; ?>
         </div>
 
-        <div class="section-tt__text w-full xs:w-7/12 md:w-1/2">
+        <div class="section-tt__text w-full px-5 xs:w-7/12 md:w-1/2">
           <?php if ($text) : ?>
             <?= $text; ?>
           <?php endif; ?>
