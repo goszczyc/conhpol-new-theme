@@ -8,8 +8,10 @@ import subMenus_init from "./inits/subMenus_init";
 import scrolledHeader_init from "./inits/scrolledHeader_init";
 import checkInput_init from "./inits/checkInput_init";
 import clientsSldier_init from "./inits/clientsSlider_init.";
-import map_init from "./map/map_init";
+// import map_init from "./map/map_init";
+import getTags from "./map_new/test";
 import sendCites from "./checkCites";
+import map_init from "./map_new/map_init";
 
 document.addEventListener("DOMContentLoaded", () => {
     burgerMenu_init();
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrolledHeader_init();
     checkInput_init();
     clientsSldier_init();
-    map_init();
+    // map_init();
     sendCites();
+    getTags();
 });

@@ -17,7 +17,7 @@ require_once __DIR__ . '/src/php/custom-tax/filters.php';
 // WPML custom Language selector
 require_once __DIR__ . '/src/php/WPML/language-selector.php';
 // Ajax
-require_once __DIR__ . '/src/php/ajax/getLocations.php';
+require_once __DIR__ . '/src/php/ajax/getLocationsNew.php';
 require_once __DIR__ . '/src/php/ajax/citesForm.php';
 
 

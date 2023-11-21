@@ -7,8 +7,8 @@ import mapSearch from "./mapSearch";
 import mapShowSearch from "./mapShowSearch";
 
 export default async () => {
-	showFilters(); 
-	mapShowSearch();
+	// showFilters(); 
+	// mapShowSearch();
 	// Add MAP
 	let map = L.map("map-container", {
 		scrollWheelZoom: false,
