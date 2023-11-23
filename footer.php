@@ -1,3 +1,6 @@
+<!--  -->
+
+
 <footer class="border-t border-solid border-t-gray footer">
     <div class="container grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-x-10 xs:gap-10 px-5 mx-auto pt-[60px] max-w-[1102.48px]">
         <div class="col-span-full md:col-span-1 mb-10 xs:mb-0">

@@ -1,51 +1,39 @@
-import L, { marker } from "leaflet";
-import "leaflet/dist/leaflet.css";
-import "leaflet-gesture-handling";
-import showFilters from "./mapFiltersToggle";
-import getTags from "./getTags";
-import mapSearch from "./mapSearch";
-import mapShowSearch from "./mapShowSearch";
+import fetch_init from "../fetch";
+import L from "leaflet";
+import createMap from "./createMap";
+import updateMarkersLayer from "./updadeMarkersLayer";
+import handleSearch from "./handleSearch";
+import handleFiltersDisplay from "./handleFiltersDisplay";
+import addShopsToContainer from "./addShopsToContainer";
 
-export default async () => {
-	showFilters(); 
-	mapShowSearch();
-	// Add MAP
-	let map = L.map("map-container", {
-		scrollWheelZoom: false,
-		gestureHandling: true,
-		zoomControl: false,
-	}).setView([50, 50], 4);
-	L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-		maxZoom: 14,
-		minZoom: 1,
-		attribution: "© OpenStreetMap",
-	}).addTo(map);
-	L.control
-		.zoom({
-			position: "topleft",
-		})
-		.addTo(map);
-	map.on("popupopen", function (e) {
-		const mapContainer = document.querySelector("#map-container");
-		mapContainer.scrollIntoView({
-			behavior: "smooth",
-		});
-		let px = map.project(e.target._popup._latlng); // find the pixel location on the map where the popup anchor is
-		px.y -= e.target._popup._container.clientHeight / 2; // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
-		map.panTo(map.unproject(px), { animate: true }); // pan to new center
-	});
-	let markers = L.markerClusterGroup();
-	// Ajax Data
-	const allRegions = JSON.stringify(["all"]);
-	const allFilters = JSON.stringify(["all"]);
+const map_init = async () => {
+    const ajaxData = new FormData();
+    ajaxData.append("action", "getLocations");
+    try {
+        // Fetch shops data
+        const shops = await fetch_init(ajaxData);
 
-	const ajaxData = new FormData();
-	ajaxData.append("action", "getLocations");
-	ajaxData.append("regions", allRegions);
-	ajaxData.append("filters", allFilters);
+        // create map to a container
+        const map = createMap();
 
-	await getTags(ajaxData, map, markers);
+        // create markers layer
+        const markersLayer = L.layerGroup();
 
-	mapSearch(map, markers);
+        // handle filters fieldset displaying/hiding
+        handleFiltersDisplay();
 
+        // Display fetched shops on a sidebar
+        addShopsToContainer(map, markersLayer, shops);
+
+        // Display fetched shops on map
+        updateMarkersLayer(map, markersLayer, shops);
+
+        // Watch search/filtrer form for submit and process it
+        handleSearch(map, markersLayer, shops);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
 };
+
+export default map_init;

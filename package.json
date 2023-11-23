@@ -1,5 +1,5 @@
 {
-    "name": "kantier",
+    "name": "conhpol",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -32,9 +32,8 @@
     },
     "dependencies": {
         "fslightbox": "^3.4.1",
-        "swiper": "^10.2.0",
         "leaflet": "^1.9.2",
         "leaflet-gesture-handling": "^1.2.2",
-        "leaflet.markercluster": "^1.5.3"
+        "swiper": "^10.2.0"
     }
 }
