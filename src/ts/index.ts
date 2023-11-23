@@ -9,7 +9,7 @@ import scrolledHeader_init from "./inits/scrolledHeader_init";
 import checkInput_init from "./inits/checkInput_init";
 import clientsSldier_init from "./inits/clientsSlider_init.";
 // import map_init from "./map/map_init";
-import getTags from "./map_new/test";
+import getTags from "./map_new/map_init";
 import sendCites from "./checkCites";
 import map_init from "./map_new/map_init";
 

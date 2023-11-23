@@ -4,13 +4,7 @@ $filters = get_terms($args = array(
     'taxonomy' => 'filters',
     'hide_empty' => false,
     'parent' => 9
-));
-$regions = get_terms($args = array(
-    'taxonomy' => 'filters',
-    'hide_empty' => false,
-    'parent' => 381
-));
-?>
+)); ?>
 
 
 
@@ -20,25 +14,11 @@ $regions = get_terms($args = array(
         <div class="w-full sm:w-1/2 md:w-5/12 lg:w-4/12 xl:w-3/12 map__sidebar">
             <div class="map__search">
                 <button class="map__search-show-btn"></button>
-                <form id="map-search" class="map__search-form">
+                <form class="map__search-form">
                     <label for="region" class="map__search-label"><?php _e('country/region or city', 'conhpol'); ?></label>
-                    <!-- <input id="region" name="region" type="text" class="map__search-input"> -->
-                    <select name="region" id="region" class="map__search-input">
-
-                        <option value="all">Wszystkie kraje</option>
-
-                        <?php foreach ($regions as $region) : ?>
-                            <?php $option = $region->name; ?>
-
-                            <option value="<?php echo strtolower($option); ?>">
-                                <?php echo $option; ?>
-                            </option>
-
-                        <?php endforeach; ?>
-
-                    </select>
+                    <input id="region" name="region" type="text" class="map__search-input">
                     <input type="submit" value="<?php _e('Search', 'conhpol'); ?>" class="map__search-submit">
-                    <button id="filters-btn" class="map__search-btn" type="button"><?php _e('filter by', 'conhpol'); ?> <span class="map__search-btn-arrow"></span></button>
+                    <button id="filters-btn" class="map__search-btn"><?php _e('filter by', 'conhpol'); ?> <span class="map__search-btn-arrow"></span></button>
                     <fieldset class="map__search-filters">
 
                         <?php foreach ($filters as $filter) :

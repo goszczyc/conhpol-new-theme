@@ -1,36 +1,4 @@
-<div class="test container mx-auto">
-    <?php
-
-    $geoTags = [];
-
-    $i = 1;
-
-    $args = array(
-        'post_type' => 'shops',
-        'numberposts' => -1,
-    );
-
-    $shops = get_posts($args);
-
-    $shops = new WP_Query($args);
-
-    if ($shops->have_posts()) {
-        while ($shops->have_posts()) {
-            $shops->the_post();
-            $cTerms = get_the_terms('', 'filters');
-            $country = '';
-            foreach ($cTerms as $cTerm) {
-                if ($cTerm->parent == 381) $country = $cTerm->name;
-            }
-
-            $geoTags[] = array('country' => $country);
-        }
-
-
-        print_r(json_encode($geoTags));
-    }
-    ?>
-</div>
+<!--  -->
 
 
 <footer class="border-t border-solid border-t-gray footer">

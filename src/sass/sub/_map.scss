@@ -94,8 +94,8 @@
             cursor: pointer;
 
             &-arrow {
-                width: .75rem;
-                height: .75rem;
+                width: 0.75rem;
+                height: 0.75rem;
                 margin-left: 2.6rem;
                 border-top: 2px solid #000;
                 border-right: 2px solid #000;
@@ -140,7 +140,7 @@
         }
 
         .map__search-filter-label {
-            @include scale-fontsize($fontsize: .75rem, $scale: 0.2);
+            @include scale-fontsize($fontsize: 0.75rem, $scale: 0.2);
             display: block;
             font-weight: 200;
             position: relative;
@@ -209,6 +209,11 @@
                 @include scale-fontsize($fontsize: 2rem);
                 text-transform: uppercase;
                 font-weight: 600;
+                line-height: 1.2;
+                transition: color 300ms;
+                &:hover {
+                    color: $primary-color;
+                }
             }
             &-text,
             &-text a,
@@ -228,12 +233,12 @@
 
     &__popup-name {
         h3 {
-            font-size: .75rem;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
         }
         h4 {
-            font-size: .75rem;
+            font-size: 0.75rem;
             margin-bottom: 0.625rem;
             font-weight: 200;
         }
@@ -242,7 +247,7 @@
     &__popup-text,
     &__popup-text p,
     &__popup-text a {
-        font-size: .75rem;
+        font-size: 0.75rem;
         line-height: 1.3;
         font-weight: 200;
         margin: 0;

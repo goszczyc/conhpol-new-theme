@@ -1,11 +1,9 @@
 import L from "leaflet";
-import "leaflet.markercluster";
-// import 'leaflet.markercluster/dist/MarkerCluster.css'
-// import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
-export default (tags, map, markers) => {
+export default (map, layer, tags) => {
     let long = tags == undefined ? tags[0].coordinates.longitude : 50.0619474;
     let latt = tags == undefined ? tags[0].coordinates.lattitude : 19.9368564;
+
     map.setView([long, latt]);
     tags.forEach((tag) => {
         let theIcon = L.icon({
@@ -16,7 +14,7 @@ export default (tags, map, markers) => {
 
         let marker = L.marker(
             [tag.coordinates.longitude, tag.coordinates.lattitude],
-            { icon: theIcon }
+            { id: tag.shopId, icon: theIcon }
         ).bindPopup(
             `
 			<div style="max-height: 350px; overflow-y:auto">
@@ -42,8 +40,15 @@ export default (tags, map, markers) => {
                 maxWidth: 300,
             }
         );
-        markers.addLayer(marker);
+        marker.addTo(layer);
     });
 
-    return markers.addTo(map);
+    layer.addTo(map);
+
+    let groupBounds = L.latLngBounds();
+    layer.eachLayer((lay) => {
+        groupBounds.extend(lay.getLatLng());
+    });
+
+    map.fitBounds(groupBounds);
 };

@@ -3,8 +3,7 @@ function getLocations()
 {
 
     $geoTags = [];
-
-    $i = 1;
+    $shopId = 1;
 
     $args = array(
         'post_type' => 'shops',
@@ -40,24 +39,29 @@ function getLocations()
                 'lattitude' => get_field('lattitude')
             );
             $gMapLink = '<a class="map__search-shop-text map__popup-text--gm" href="' . $gLink . '">' . translate('See in Google Maps ', 'conhpol') . '</a>';
-            $tag = array(
-                'name' => $shopName,
-                'type' => $type,
-                'thumbnail' => $thumbnail,
-                'coordinates' => $coordinates,
-                'data' => $data,
-                'avModels' => $models,
-                'icon' => $icon,
-                'gMapLink' => $gMapLink
-            );
-
 
             foreach ($shopTerms as $shopTerm) {
-                if ($shopTerm->parent == 8) $models[] = $shopTerm->name;
+                if ($shopTerm->parent == 9) $models[] = $shopTerm->name;
             }
             foreach ($shopTerms as $shopTerm) {
                 if ($shopTerm->parent == 381) $country = $shopTerm->name;
             }
+
+            $tag = array(
+                'shopId' => $shopId,
+                'name' => $shopName,
+                'type' => $type,
+                'data' => $data,
+                'country' => $country,
+                'avModels' => $models,
+                'coordinates' => $coordinates,
+                'thumbnail' => $thumbnail,
+                'icon' => $icon,
+                'gMapLink' => $gMapLink
+            );
+
+            $shopId++;
+
             $geoTags[] = $tag;
         }
     }

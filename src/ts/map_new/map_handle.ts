@@ -22,14 +22,11 @@ export default () => {
         })
         .addTo(map);
     map.on("popupopen", function (e) {
-        const mapContainer = document.querySelector("#map-container");
-        mapContainer.scrollIntoView({
-            behavior: "smooth",
-        });
+        map.setZoom(11, { animate: true });
         let px = map.project(e.target._popup._latlng); // find the pixel location on the map where the popup anchor is
         px.y -= e.target._popup._container.clientHeight / 2; // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
         map.panTo(map.unproject(px), { animate: true }); // pan to new center
     });
 
-	return map;
+    return map;
 };
