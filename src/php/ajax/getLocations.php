@@ -5,12 +5,16 @@ function getLocations()
     $geoTags = [];
     $shopId = 1;
 
+    $lang = $my_current_lang = apply_filters('wpml_current_language', NULL);
+
+    $country_parent_id = ($lang === 'en') ? 386 : 381;
+    $models_parent_id = ($lang === 'en') ? 304 : 9;
+
     $args = array(
         'post_type' => 'shops',
         'numberposts' => -1,
     );
 
-    // $shops = get_posts($args);
 
     $shops = new WP_Query($args);
 
@@ -41,13 +45,14 @@ function getLocations()
             $gMapLink = '<a class="map__search-shop-text map__popup-text--gm" href="' . $gLink . '">' . translate('See in Google Maps ', 'conhpol') . '</a>';
 
             foreach ($shopTerms as $shopTerm) {
-                if ($shopTerm->parent == 9) $models[] = $shopTerm->name;
+                if ($shopTerm->parent == $models_parent_id) $models[] = $shopTerm->name;
             }
             foreach ($shopTerms as $shopTerm) {
-                if ($shopTerm->parent == 381) $country = $shopTerm->name;
+                if ($shopTerm->parent == $country_parent_id) $country = $shopTerm->name;
             }
 
             $tag = array(
+                'lang' => $my_current_lang,
                 'shopId' => $shopId,
                 'name' => $shopName,
                 'type' => $type,

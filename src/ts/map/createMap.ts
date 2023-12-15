@@ -22,7 +22,11 @@ export default () => {
         })
         .addTo(map);
     map.on("popupopen", function (e) {
-        map.setZoom(11, { animate: true });
+
+        // Set view and zoom on popup open
+        map.setView(e.target._popup._latlng, 11, { animate: true });
+
+        // Fix view to fit popup
         let px = map.project(e.target._popup._latlng); // find the pixel location on the map where the popup anchor is
         px.y -= e.target._popup._container.clientHeight / 2; // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
         map.panTo(map.unproject(px), { animate: true }); // pan to new center

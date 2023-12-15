@@ -5,6 +5,7 @@ import updateMarkersLayer from "./updadeMarkersLayer";
 import handleSearch from "./handleSearch";
 import handleFiltersDisplay from "./handleFiltersDisplay";
 import addShopsToContainer from "./addShopsToContainer";
+import showSearchMobile from "./showSearchMobile";
 
 const map_init = async () => {
     const ajaxData = new FormData();
@@ -21,6 +22,9 @@ const map_init = async () => {
 
         // handle filters fieldset displaying/hiding
         handleFiltersDisplay();
+
+        // handle displaying / hiding search menu on mobile
+        showSearchMobile();
 
         // Display fetched shops on a sidebar
         addShopsToContainer(map, markersLayer, shops);

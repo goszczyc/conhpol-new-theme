@@ -14,18 +14,18 @@ $regions = get_terms($args = array(
 
 
 
-<section class="map px-5 relative">
+<section class="map relative">
 
     <div class="flex flex-wrap">
-        <div class="w-full sm:w-1/2 md:w-5/12 lg:w-4/12 xl:w-3/12 map__sidebar">
+        <div class="w-full sm:w-4/12 lg:w-3/12 xl:w-2/12 map__sidebar">
             <div class="map__search">
                 <button class="map__search-show-btn"></button>
-                <form id="map-search" class="map__search-form">
+                <form id="map-search" class="map__search-form px-5">
                     <label for="region" class="map__search-label"><?php _e('country/region or city', 'conhpol'); ?></label>
                     <!-- <input id="region" name="region" type="text" class="map__search-input"> -->
                     <select name="region" id="region" class="map__search-input">
 
-                        <option value="all">Wszystkie kraje</option>
+                        <option value="all"><?php _e('All countries', 'conhpol'); ?></option>
 
                         <?php foreach ($regions as $region) : ?>
                             <?php $option = $region->name; ?>
@@ -55,14 +55,14 @@ $regions = get_terms($args = array(
                 </form>
 
                 <div class="map__search-results">
-                    <h3 class="map__search-results-heading"><span id="num-of-results"></span><?php _e(' results found', 'conhpol'); ?></h3>
-                    <div class="map__search-shops">
+                    <h3 class="map__search-results-heading px-5"><span id="num-of-results"></span><?php _e(' results found', 'conhpol'); ?></h3>
+                    <div class="map__search-shops px-5">
 
                     </div>
                 </div>
             </div>
         </div>
-        <div id="map-container" class="w-full sm:w-1/2 md:w-7/12 lg:w-8/12 xl:w-9/12 map__container">
+        <div id="map-container" class="w-full sm:w-8/12 lg:w-9/12 xl:w-10/12 map__container">
             <div id="map" style="height: 100%;"></div>
         </div>
     </div>

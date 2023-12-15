@@ -31,6 +31,12 @@ const handleSearch = (map, layer, shops) => {
         let selectedCountry = selectInput.value;
 
         // filter shops
+
+        console.log(filterValues);
+        console.log(selectedCountry);
+        shops.forEach((shop) => {
+            console.log(shop);
+        });
         const newShops = shops.filter((shop) => {
             if (
                 filterValues.every((filter) =>

@@ -1,19 +1,29 @@
 .btn {
     @apply px-[5.8em] 
- py-[1em]
- text-white
- border
- border-white
- border-solid
- transition-colors
- duration-300
- hover:bg-white
- focus:bg-white
- focus:text-black
- hover:text-black
- cursor-pointer;
+    py-[1em]
+    text-white
+    border
+    border-white
+    border-solid
+    transition-colors
+    duration-300
+    hover:bg-white
+    focus:bg-white
+    focus:text-black
+    hover:text-black
+    cursor-pointer;
 
     &--adaptive {
         @apply px-[3em] xs:px-[5.8em];
+    }
+    &--primary {
+        @apply text-black
+        px-[3em]
+        text-center
+        border-black
+        focus:bg-black
+        focus:text-primary
+        hover:bg-black
+        hover:text-primary
     }
 }

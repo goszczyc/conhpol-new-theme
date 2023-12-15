@@ -16,7 +16,9 @@ export default (map, layer, shops) => {
             `
 			<div style="max-height: 350px; overflow-y:auto">
 				<div>
-				<img style="width:100%;height:auto" src="${shop.thumbnail}" style="display:block;">
+				<img style="width:100%;height:auto" src="${
+                    shop.thumbnail
+                }" style="display:block;">
 				</div>
 				<div class="map__popup-name">
 				<h3>${shop.name}</h3>
@@ -29,12 +31,14 @@ export default (map, layer, shops) => {
 				${shop.data.phone}
 				</div>
 				<div class="map__popup-text">${shop.data.email}</div>
-				<div class="map__popup-text map__popup-text--av">${shop.avModels}</div>
+				<div class="map__popup-text map__popup-text--av">${shop.avModels.map(
+                    (model) => " " + model
+                )} </div>
 				<div class="map__popup-text map__popup-text--gm">${shop.gMapLink}</div>
 			</div>
 			`,
             {
-                maxWidth: 300,
+                maxWidth: 260,
             }
         );
         // Add marker to layer group
